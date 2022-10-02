@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import "../styles/uploadImage.css";
 
-const UploadImage = () => {
-  const [previewImage, setPreviewIMage] = useState();
+const UploadImage = (props) => {
+  const [previewImage, setPreviewImage] = useState();
   const [isShown, setIsShown] = useState(false);
   function showPreview(event) {
     console.log("file:", event.target.files.length);
     if (event.target.files.length > 0) {
       let src = URL.createObjectURL(event.target.files[0]);
-      setPreviewIMage(src);
+      setPreviewImage(src);
       setIsShown(true);
+      props.catchImage(src);
     }
   }
+
   return (
     <div
       className="upload-image"

@@ -4,7 +4,7 @@ import DtPicker from "react-calendar-datetime-picker";
 import "react-calendar-datetime-picker/dist/index.css";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import a from "../customizedJs/customized";
+import changeStyleCalender from "../customizedJs/customized";
 import eventFrontImg from "../images/front.png";
 import UploadImage from "../components/UploadImage";
 import {
@@ -19,6 +19,7 @@ const CreateEvent = () => {
   const [loading, setLoading] = useState(false);
   const [loadingStart, setLoadingStart] = useState(false);
   const [title, setTitle] = useState("");
+  const [eventImg, setEventImg] = useState("");
   const [host, setHost] = useState("");
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("Click to set date and time");
@@ -51,6 +52,7 @@ const CreateEvent = () => {
     const obj = {
       id: eventId,
       title: title,
+      eImage: eventImg,
       host: host,
       location: location,
       start: date,
@@ -68,6 +70,9 @@ const CreateEvent = () => {
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
   };
+  const handlePreviewImage = (e) => {
+    setEventImg(e);
+  };
   const handleHostChange = (e) => {
     setHost(e.target.value);
   };
@@ -75,11 +80,11 @@ const CreateEvent = () => {
     setLocation(e.target.value);
   };
   const handleEventStartDate = (dateData) => {
-    a();
+    changeStyleCalender();
     setDate(dateData);
   };
   const handleEventEndDate = (dateData) => {
-    a();
+    changeStyleCalender();
     setEndDate(dateData);
   };
   return (
@@ -154,7 +159,7 @@ const CreateEvent = () => {
               />
             </div>
 
-            <UploadImage />
+            <UploadImage catchImage={handlePreviewImage} />
             <input type="submit" value="Submit" />
           </form>
         </div>
