@@ -1,0 +1,116 @@
+.event-head {
+  line-height: 1.5;
+}
+.event-head-text {
+  font-size: 24px;
+  font-weight: 700;
+}
+.event-container {
+  width: 90%;
+  margin: 30px auto;
+}
+.event-title {
+  margin: 30px 0;
+}
+.event-input-label {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.create-event-icon {
+  color: #ef05df;
+  font-size: 24px;
+  margin-right: 5px;
+}
+.next-btn {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  padding: 12px 16px;
+  border-radius: 50%;
+  background-color: #8456ec;
+}
+.next-btn:hover {
+  background-color: #7851d3;
+}
+.next-btn-icon {
+  font-size: 22px;
+  color: #fff;
+}
+input[type="text"] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-bottom: 15px;
+  display: block;
+  border-radius: 6px;
+  border: none;
+  background-color: rgb(231, 230, 230, 0.5);
+}
+
+input[type="submit"] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 25px 0;
+  display: inline-block;
+  background-color: rgb(238, 98, 184);
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+/* calender styles */
+.custom-input {
+  text-align: right;
+  color: #ede217;
+  height: 46px !important;
+  line-height: 46px !important;
+}
+
+::placeholder {
+  color: #8f8e8e;
+  letter-spacing: 0;
+  text-align: start;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.custom-days {
+  background-color: #c8daff;
+}
+.is-week-days {
+  color: #180e0e;
+}
+.is-disabled {
+  color: rgb(78, 93, 80);
+}
+.header {
+  background-color: #e12778 !important;
+}
+.is-selected-day {
+  background-color: #e12778 !important;
+}
+.input-picker--input {
+  width: 90% !important;
+  padding: 22px 0px !important;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #5b5a5e;
+  background-color: rgb(231, 230, 230, 0.5);
+}
+.time {
+  margin: 20px 0 !important;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+.end-event-date {
+  margin: 15px 0;
+}
+
+.react-calendar-datetime-picker .calender-modal {
+}
+
+@media only screen and (max-width: 500px) {
+}
